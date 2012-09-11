@@ -1,0 +1,35 @@
+{
+  "name": "zepto-tooltip",
+  "title": "Zepto Tooltip",
+  "description": "Responsive and Mobile-Friendly Tooltip",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ptech/zepto-tooltip",
+  "author": {
+    "name": "Present Technologies",
+    "email": "info@present-technologies.com",
+    "url": "http://www.present-technologies.com"
+  },
+  "maintainers": [
+    {
+      "name": "Samuel Santos",
+      "email": "ssantos@present-technologies.com",
+      "url": "http://www.samaxes.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ptech/zepto-tooltip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ptech/zepto-tooltip/issues"
+  },
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "https://github.com/ptech/zepto-tooltip/blob/master/LICENSE.txt"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": []
+}
