@@ -29,7 +29,7 @@ module.exports = function(grunt) {
           ' */'
     },
     clean: {
-      dist: ['dist']
+      dist: ['dist', 'bin']
     },
     concat: {
       js: {
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
           mode: 'zip'
         },
         files: {
-          'dist/<%= pkg.name %>-<%= pkg.version %>.zip': 'dist/**'
+          'bin/<%= pkg.name %>-<%= pkg.version %>.zip': 'dist/**'
         }
       }
     },

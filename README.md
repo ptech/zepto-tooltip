@@ -3,15 +3,15 @@
 Responsive and Mobile-Friendly Tooltip. Based on the great [jQuery Tooltip](http://osvaldas.info/u/p4Yk) from Osvaldas Valutis.
 
 ## Getting Started
-Download the [production version][min] or the [development version][max].
+Download [Zepto][zepto] and [Zepto Tooltip][zepto-tooltip].
 
-[min]: https://raw.github.com/ptech/zepto-tooltip/master/dist/zepto-tooltip.min.js
-[max]: https://raw.github.com/ptech/zepto-tooltip/master/dist/zepto-tooltip.js
+[zepto]: http://zeptojs.com/
+[zepto-tooltip]: https://github.com/downloads/ptech/zepto-tooltip/zepto-tooltip-1.0.0.zip
 
-In your web page, add the CSS theme and the JavaScript file:
+In your web page, include Zepto library and Zepto Tooltip CSS theme and JavaScript files:
 
 ```html
-<link rel="stylesheet" href="css/zepto-tooltip.smooth.css" />
+<link rel="stylesheet" href="css/smooth/zepto-tooltip.css" />
 <script src="js/zepto.js"></script>
 <script src="js/zepto-tooltip.js"></script>
 ```
@@ -35,18 +35,18 @@ Assign the attribute ```rel="tooltip"``` and ```title="Enter your tip here"``` t
 ## Building Zepto Tooltip
 Zepto Tooltip uses the [grunt](http://github.com/cowboy/grunt) build system. Building Zepto Tooltip requires you to have [node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed.
 
-Install grunt.  
+Install grunt:  
 ```npm install grunt -g```
 
-Clone the Zepto Tooltip git repo.  
+Clone the Zepto Tooltip git repo:  
 ```git clone git://github.com/ptech/zepto-tooltip.git```  
 ```cd zepto-tooltip```
 
-Install node modules.  
+Install node modules:  
 ```npm install grunt-contrib```  
 ```npm install grunt-css```
 
-Run grunt.  
+Run grunt:  
 ```grunt build```
 
 There are many other tasks that can be run through grunt. For a list of all tasks:  
