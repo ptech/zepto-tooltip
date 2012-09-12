@@ -1,0 +1,19 @@
+/*!
+ * Zepto Tooltip - v1.0.0 - 2012-09-12
+ * https://github.com/ptech/zepto-tooltip
+ *
+ * Copyright (c) 2012 Present Technologies
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.tooltip{background:#111;color:#fff;padding:15px;position:absolute;text-align:center;z-index:100}.tooltip:after{border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #111;bottom:-10px;content:'';height:0;left:50%;margin-left:-10px;position:absolute;width:0}.tooltip.top:after{border-bottom:10px solid #111;border-top-color:transparent;bottom:auto;top:-20px}.tooltip.left:after{left:10px;margin:0}.tooltip.right:after{left:auto;margin:0;right:10px}

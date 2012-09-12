@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="description" content="Demo of Zepto Tooltip: Responsive, Mobile-Friendly" />
+        <title>Zepto Tooltip: Responsive, Mobile-Friendly</title>
+
+        <!-- Link Tags -->
+        <link rel="icon" href="favicon.ico" sizes="16x16 32x32" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/smooth/zepto-tooltip.min.css" />
+
+        <style>
+            @import  url(http://fonts.googleapis.com/css?family=Cabin+Condensed:400,700|Noticia+Text:400,400italic,700,700italic&subset=latin,latin-ext);
+
+            * {
+                -webkit-box-sizing: border-box;
+                   -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+            }
+
+            body {
+                background: #fff url(img/bg.gif) repeat 0 0;
+                color: #111;
+                font: normal 100%/1 'Noticia Text', 'Lucida Bright', Georgia, serif;
+            }
+
+            #container {
+                height: 300px;
+                left: 50%;
+                margin: -150px 0 0 -200px;
+                position: absolute;
+                top: 50%;
+                width: 400px;
+            }
+
+            @media screen and (max-width: 440px) {
+                #container {
+                    left: auto;
+                    margin: 0;
+                    padding: 30px 20px;
+                    position: static;
+                    top: auto;
+                    width: 100%;
+                }
+            }
+
+            @media screen and (max-height: 340px) {
+                #container {
+                    left: auto;
+                    margin: 0 auto;
+                    padding-bottom: 30px;
+                    padding-top: 30px;
+                    position: static;
+                    top: auto;
+                }
+            }
+
+            p {
+                line-height: 1.85;
+                text-align: justify;
+                text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+            }
+
+            a {
+                color: #84e100;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #6fbc00;
+            }
+
+            abbr {
+                border-bottom: 1px dotted #111;
+                cursor: help;
+            }
+
+            #info {
+                background-color: rgba(0, 0, 0, .05);
+                -webkit-border-radius: 50%;
+                   -moz-border-radius: 50%;
+                        border-radius: 50%;
+                height: 60px;
+                margin: 0 auto 50px;
+                padding: 5px;
+                width: 60px;
+            }
+
+            #info:hover {
+                background-color: rgba(0, 0, 0, .1);
+            }
+
+            #info abbr {
+                background: #84e100;
+                background: -webkit-gradient(linear, left top, left bottom, from(#84e100), to(#6fbc00));
+                background: -webkit-linear-gradient(top, #84e100, #6fbc00);
+                background: -moz-linear-gradient(top, #84e100, #6fbc00);
+                background: -ms-radial-gradient(top, #84e100, #6fbc00);
+                background: -o-linear-gradient(top, #84e100, #6fbc00);
+                background: linear-gradient(top, #84e100, #6fbc00);
+                border: none;
+                -webkit-border-radius: 50%;
+                   -moz-border-radius: 50%;
+                        border-radius: 50%;
+                color: #fff;
+                cursor: help;
+                display: block;
+                font-size: 2.188em;
+                font-weight: bold;
+                height: 100%;
+                line-height: 1.4;
+                text-align: center;
+                text-shadow: 0 1px rgba(0, 0, 0, .25);
+            }
+
+            #info {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="info"><abbr title="This is a demo for <em>Zepto Tooltip</em>: Responsive, Mobile-Friendly." rel="tooltip">i</abbr></div>
+            <p>Tooltip is a splendid invention. Small detail in web design that plays a big role when it comes to <abbr title="User Experience" rel="tooltip">UX</abbr>. Usually, tooltips are used to present a tiny amount of hidden content (mainly explanatory, so-called tips), that pops up when user moves a cursor over or clicks (less common) on a special target. <a href="https://github.com/ptech/zepto-tooltip" title="Zepto Tooltip: Responsive, Mobile-Friendly" rel="tooltip" style="white-space: nowrap;">Keep reading &rsaquo;</a></p>
+        </div>
+
+        <script type="text/javascript" src="js/zepto.min.js"></script>
+        <script type="text/javascript" src="js/zepto-tooltip.min.js"></script>
+    </body>
+</html>
