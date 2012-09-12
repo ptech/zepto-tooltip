@@ -2,6 +2,7 @@
 module.exports = function(grunt) {
 
   // Grunt plugins
+  grunt.loadNpmTasks('grunt-contrib');
   grunt.loadNpmTasks('grunt-css');
 
   // Project configuration.
@@ -27,18 +28,21 @@ module.exports = function(grunt) {
           ' * limitations under the License.\n' +
           ' */'
     },
+    clean: {
+      dist: ['dist']
+    },
     concat: {
       js: {
         src: ['<banner:meta.banner>', '<file_strip_banner:src/<%= pkg.name %>.js>'],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
       base_theme: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:themes/base/<%= pkg.name %>.base.css>'],
-        dest: 'dist/css/<%= pkg.name %>.base.css'
+        src: ['<banner:meta.banner>', '<file_strip_banner:themes/base/<%= pkg.name %>.css>'],
+        dest: 'dist/css/base/<%= pkg.name %>.css'
       },
       smooth_theme: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:themes/smooth/<%= pkg.name %>.smooth.css>'],
-        dest: 'dist/css/<%= pkg.name %>.smooth.css'
+        src: ['<banner:meta.banner>', '<file_strip_banner:themes/smooth/<%= pkg.name %>.css>'],
+        dest: 'dist/css/smooth/<%= pkg.name %>.css'
       }
     },
     min: {
@@ -50,11 +54,21 @@ module.exports = function(grunt) {
     cssmin: {
       base_theme: {
         src: ['<config:concat.base_theme.dest>'],
-        dest: 'dist/css/<%= pkg.name %>.base.min.css'
+        dest: 'dist/css/base/<%= pkg.name %>.min.css'
       },
       smooth_theme: {
         src: ['<config:concat.smooth_theme.dest>'],
-        dest: 'dist/css/<%= pkg.name %>.smooth.min.css'
+        dest: 'dist/css/smooth/<%= pkg.name %>.min.css'
+      }
+    },
+    compress: {
+      zip: {
+        options: {
+          mode: 'zip'
+        },
+        files: {
+          'dist/<%= pkg.name %>-<%= pkg.version %>.zip': 'dist/**'
+        }
       }
     },
     lint: {
@@ -64,16 +78,16 @@ module.exports = function(grunt) {
       base_theme: {
         src: 'themes/base/*.css',
         rules: {
-          "adjoining-classes": false,
-          "box-model": false
+          'adjoining-classes': false,
+          'box-model': false
         }
       },
       smooth_theme: {
         src: 'themes/smooth/*.css',
         rules: {
-          "adjoining-classes": false,
-          "box-model": false,
-          "import": false
+          'adjoining-classes': false,
+          'box-model': false,
+          'import': false
         }
       }
     },
@@ -98,7 +112,7 @@ module.exports = function(grunt) {
     uglify: {}
   });
 
-  // Default task.
+  // Registered tasks.
   grunt.registerTask('build', 'lint csslint concat min cssmin');
 
 };

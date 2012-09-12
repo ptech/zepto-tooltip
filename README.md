@@ -11,7 +11,7 @@ Download the [production version][min] or the [development version][max].
 In your web page, add the CSS theme and the JavaScript file:
 
 ```html
-<link rel="stylesheet" href="css/smooth/zepto-tooltip.css" />
+<link rel="stylesheet" href="css/zepto-tooltip.smooth.css" />
 <script src="js/zepto.js"></script>
 <script src="js/zepto-tooltip.js"></script>
 ```
@@ -43,7 +43,8 @@ Clone the Zepto Tooltip git repo.
 ```cd zepto-tooltip```
 
 Install node modules.  
-```npm install```
+```npm install grunt-contrib```  
+```npm install grunt-css```
 
 Run grunt.  
 ```grunt build```
