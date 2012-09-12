@@ -11,9 +11,9 @@ Download [Zepto][zepto] and [Zepto Tooltip][zepto-tooltip].
 In your web page, include Zepto library and Zepto Tooltip CSS theme and JavaScript files:
 
 ```html
-<link rel="stylesheet" href="css/smooth/zepto-tooltip.css" />
-<script src="js/zepto.js"></script>
-<script src="js/zepto-tooltip.js"></script>
+<link rel="stylesheet" href="css/smooth/zepto-tooltip.min.css" />
+<script src="js/zepto.min.js"></script>
+<script src="js/zepto-tooltip.min.js"></script>
 ```
 
 Assign the attribute ```rel="tooltip"``` and ```title="Enter your tip here"``` to any of _body_ tags in HTML file where you want the tooltip to pop up when called. Set _title_ value with your tip (use ```<strong>```, ```<em>``` etc. to distinguish text fragments, but avoid _block_ elements).
