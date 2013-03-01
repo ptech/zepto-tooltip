@@ -6,7 +6,7 @@ Responsive and Mobile-Friendly Tooltip. Based on the great [jQuery Tooltip](http
 Download [Zepto][zepto] and [Zepto Tooltip][zepto-tooltip].
 
 [zepto]: http://zeptojs.com/
-[zepto-tooltip]: https://github.com/downloads/ptech/zepto-tooltip/zepto-tooltip-1.0.0.zip
+[zepto-tooltip]: https://github.com/ptech/zepto-tooltip/tags
 
 In your web page, include Zepto library and Zepto Tooltip CSS theme and JavaScript files:
 
@@ -33,23 +33,22 @@ Assign the attribute ```rel="tooltip"``` and ```title="Enter your tip here"``` t
 * It's **HTML formatting capable**. Need to write some words in italic or so? No problem, this will work out.
 
 ## Building Zepto Tooltip
-Zepto Tooltip uses the [grunt](http://github.com/cowboy/grunt) build system. Building Zepto Tooltip requires you to have [node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed.
+Zepto Tooltip uses the [grunt](http://gruntjs.com/) build system. Building Zepto Tooltip requires you to have [node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed.
 
-Install grunt:  
-```npm install grunt -g```
+Install grunt command line interface:  
+```npm install -g grunt-cli```
 
 Clone the Zepto Tooltip git repo:  
 ```git clone git://github.com/ptech/zepto-tooltip.git```  
 ```cd zepto-tooltip```
 
-Install node modules:  
-```npm install grunt-contrib```  
-```npm install grunt-css```
+Install node module dependencies:  
+```npm install```
 
 Run grunt:  
 ```grunt build```
 
-There are many other tasks that can be run through grunt. For a list of all tasks:  
+There are many other tasks that can be run through grunt. For the complete list of available tasks:  
 ```grunt --help```
 
 ## License

@@ -1,4 +1,6 @@
 (function(win) {
+    'use strict';
+
     var targets = $('[rel~=tooltip]'),
         target  = false,
         tooltip = false,
