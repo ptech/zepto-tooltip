@@ -1,8 +1,8 @@
 /*!
- * Zepto Tooltip - v1.0.0 - 2012-09-12
+ * zepto-tooltip - v1.1.1 - 2013-03-15
  * https://github.com/ptech/zepto-tooltip
  *
- * Copyright (c) 2012 Present Technologies
+ * Copyright (c) 2013 Present Technologies
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,5 +15,4 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:400italic,400);.tooltip{background:#333;background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.6)),to(rgba(0,0,0,.8)));background:-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,.8));background:-moz-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,.8));background:-ms-radial-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,.8));background:-o-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,.8));background:linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,.8));-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border-top:1px solid #fff;-webkit-box-shadow:0 3px 5px rgba(0,0,0,.3);-moz-box-shadow:0 3px 5px rgba(0,0,0,.3);box-shadow:0 3px 5px rgba(0,0,0,.3);color:#fff;font-family:Ubuntu,sans-serif;font-size:0.875em;line-height:1.5;padding:15px;position:absolute;text-align:center;text-shadow:0 1px rgba(0,0,0,.5);z-index:100}.tooltip:after{border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #333;border-top-color:rgba(0,0,0,.7);bottom:-10px;content:'';height:0;left:50%;margin-left:-10px;position:absolute;width:0}.tooltip.top:after{border-bottom:10px solid #333;border-bottom-color:rgba(0,0,0,.6);border-top-color:transparent;bottom:auto;top:-20px}.tooltip.left:after{left:10px;margin:0}.tooltip.right:after{left:auto;margin:0;right:10px}
+ */@import url(http://fonts.googleapis.com/css?family=Ubuntu:400italic,400);.tooltip{background:#333;background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.6)),to(rgba(0,0,0,.8)));background:-webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,.8));background:-moz-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,.8));background:-ms-radial-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,.8));background:-o-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,.8));background:linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,.8));-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border-top:1px solid #fff;-webkit-box-shadow:0 3px 5px rgba(0,0,0,.3);-moz-box-shadow:0 3px 5px rgba(0,0,0,.3);box-shadow:0 3px 5px rgba(0,0,0,.3);color:#fff;font-family:Ubuntu,sans-serif;font-size:.875em;line-height:1.5;padding:15px;position:absolute;text-align:center;text-shadow:0 1px rgba(0,0,0,.5);z-index:100}.tooltip:after{border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #333;border-top-color:rgba(0,0,0,.7);bottom:-10px;content:'';height:0;left:50%;margin-left:-10px;position:absolute;width:0}.tooltip.top:after{border-bottom:10px solid #333;border-bottom-color:rgba(0,0,0,.6);border-top-color:transparent;bottom:auto;top:-20px}.tooltip.left:after{left:10px;margin:0}.tooltip.right:after{left:auto;margin:0;right:10px}

@@ -1,8 +1,8 @@
 /*!
- * Zepto Tooltip - v1.0.0 - 2012-09-12
+ * zepto-tooltip - v1.1.1 - 2013-03-15
  * https://github.com/ptech/zepto-tooltip
  *
- * Copyright (c) 2012 Present Technologies
+ * Copyright (c) 2013 Present Technologies
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 (function(win) {
+    'use strict';
+
     var targets = $('[rel~=tooltip]'),
         target  = false,
         tooltip = false,
