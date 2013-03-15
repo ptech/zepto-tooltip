@@ -6,7 +6,7 @@ Responsive and Mobile-Friendly Tooltip. Based on the great [jQuery Tooltip](http
 Download [Zepto][zepto] and [Zepto Tooltip][zepto-tooltip].
 
 [zepto]: http://zeptojs.com/
-[zepto-tooltip]: https://github.com/ptech/zepto-tooltip/tags
+[zepto-tooltip]: http://ptech.github.com/zepto-tooltip/downloads/zepto-tooltip-1.1.1.zip
 
 In your web page, include Zepto library and Zepto Tooltip CSS theme and JavaScript files:
 
