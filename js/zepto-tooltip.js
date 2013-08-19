@@ -1,5 +1,5 @@
 /*!
- * zepto-tooltip - v1.1.1 - 2013-03-15
+ * zepto-tooltip - v1.1.2 - 2013-08-19
  * https://github.com/ptech/zepto-tooltip
  *
  * Copyright (c) 2013 Present Technologies
@@ -24,7 +24,7 @@
         tooltip = false,
         tip;
 
-    targets.bind('mouseover', function() {
+    targets.on('mouseover', function() {
         target  = $(this);
         tip     = target.attr('title');
         tooltip = $('<div class="tooltip"></div>');
@@ -36,50 +36,50 @@
         target.removeAttr('title');
         tooltip.css('opacity', 0).html(tip).appendTo('body');
 
-        var init_tooltip = function() {
+        var initTooltip = function() {
             if ($(win).width() < tooltip.width() * 1.5) {
                 tooltip.css('max-width', $(win).width() / 2);
             } else {
                 tooltip.css('max-width', 340);
             }
 
-            var pos_left = target.offset().left + (target.width() / 2) - (tooltip.width() / 2),
-                pos_top = target.offset().top - tooltip.height() - 20;
+            var posLeft = target.offset().left + (target.width() / 2) - (tooltip.width() / 2),
+                posTop = target.offset().top - tooltip.height() - 20;
 
-            if (pos_left < 0) {
-                pos_left = target.offset().left + target.width() / 2 - 20;
+            if (posLeft < 0) {
+                posLeft = target.offset().left + target.width() / 2 - 20;
                 tooltip.addClass('left');
             } else {
                 tooltip.removeClass('left');
             }
 
-            if (pos_left + tooltip.width() > $(win).width()) {
-                pos_left = target.offset().left - tooltip.width() + target.width() / 2 + 20;
+            if (posLeft + tooltip.width() > $(win).width()) {
+                posLeft = target.offset().left - tooltip.width() + target.width() / 2 + 20;
                 tooltip.addClass('right');
             } else {
                 tooltip.removeClass('right');
             }
 
-            if (pos_top < 0) {
-                pos_top = target.offset().top + target.height();
+            if (posTop < 0) {
+                posTop = target.offset().top + target.height();
                 tooltip.addClass('top');
             } else {
                 tooltip.removeClass('top');
             }
 
             tooltip.css({
-                left: pos_left,
-                top: pos_top
+                left: posLeft,
+                top: posTop
             }).animate({
                 translateY: '10px',
                 opacity: 1
             }, 50);
         };
 
-        init_tooltip();
-        $(win).resize(init_tooltip);
+        initTooltip();
+        $(win).resize(initTooltip);
 
-        var remove_tooltip = function() {
+        var removeTooltip = function() {
             tooltip.animate({
                 translateY: '-10px',
                 opacity: 0
@@ -90,7 +90,7 @@
             target.attr('title', tip);
         };
 
-        target.bind('mouseout', remove_tooltip);
-        tooltip.bind('click', remove_tooltip);
+        target.on('mouseout', removeTooltip);
+        tooltip.on('click', removeTooltip);
     });
 }(window));
