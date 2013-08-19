@@ -26,47 +26,47 @@ module.exports = function(grunt) {
       ' */\n',
     // Task configuration.
     clean: {
-      dist: ['dist', 'bin']
+      dist: ['dist']
     },
     jshint: {
       options: {
+        bitwise: true,
+        camelcase: true,
         curly: true,
         eqeqeq: true,
         immed: true,
+        indent: 2,
         latedef: true,
         newcap: true,
         noarg: true,
-        sub: true,
         undef: true,
-        boss: true,
-        eqnull: true
+        unused: true,
+        strict: true,
+        trailing: true
       },
       grunt: ['package.json', 'Gruntfile.js'],
-      lib: {
+      src: {
         options: {
-          es5: true,
           browser: true,
+          indent: 4,
+          quotmark: 'single',
           globals: {
-            $: true
+            $: false
           }
         },
         src: ['src/**/*.js']
       }
     },
     csslint: {
-      base_theme: {
-        rules: {
-          'adjoining-classes': false,
-          'box-model': false
-        },
+      options: {
+        'adjoining-classes': false,
+        'fallback-colors': false,
+        'import': false
+      },
+      basetheme: {
         src: 'themes/base/*.css'
       },
-      smooth_theme: {
-        rules: {
-          'adjoining-classes': false,
-          'box-model': false,
-          'import': false
-        },
+      smooththeme: {
         src: 'themes/smooth/*.css'
       }
     },
@@ -79,11 +79,11 @@ module.exports = function(grunt) {
         src: ['src/<%= pkg.name %>.js'],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
-      base_theme: {
+      basetheme: {
         src: ['themes/base/<%= pkg.name %>.css'],
         dest: 'dist/css/base/<%= pkg.name %>.css'
       },
-      smooth_theme: {
+      smooththeme: {
         src: ['themes/smooth/<%= pkg.name %>.css'],
         dest: 'dist/css/smooth/<%= pkg.name %>.css'
       }
@@ -98,19 +98,19 @@ module.exports = function(grunt) {
       }
     },
     cssmin: {
-      base_theme: {
-        src: ['<%= concat.base_theme.dest %>'],
+      basetheme: {
+        src: ['<%= concat.basetheme.dest %>'],
         dest: 'dist/css/base/<%= pkg.name %>.min.css'
       },
-      smooth_theme: {
-        src: ['<%= concat.smooth_theme.dest %>'],
+      smooththeme: {
+        src: ['<%= concat.smooththeme.dest %>'],
         dest: 'dist/css/smooth/<%= pkg.name %>.min.css'
       }
     },
     compress: {
       zip: {
         options: {
-          archive: 'bin/<%= pkg.name %>-<%= pkg.version %>.zip'
+          archive: 'dist/<%= pkg.name %>-<%= pkg.version %>.zip'
         },
         files: [
           {expand: true, cwd: 'dist', src: ['**']}
@@ -122,11 +122,13 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-compress');
-  grunt.loadNpmTasks('grunt-css');
 
   // Registered tasks.
   grunt.registerTask('build', ['jshint', 'csslint', 'concat', 'uglify', 'cssmin']);
+  grunt.registerTask('release', ['clean', 'build', 'compress']);
 };
