@@ -1,6 +1,6 @@
 # Zepto Tooltip
 
-Responsive and Mobile-Friendly Tooltip. Based on the great [jQuery Tooltip](http://osvaldas.info/u/p4Yk) from Osvaldas Valutis.
+Responsive and Mobile-Friendly Tooltip. Based on the great [jQuery Tooltip](http://osvaldas.info/elegant-css-and-jquery-tooltip-responsive-mobile-friendly) from Osvaldas Valutis.
 
 ## Getting Started
 Download [Zepto][zepto] and [Zepto Tooltip][zepto-tooltip].
